@@ -110,7 +110,7 @@ class MotorPolicyListingController: BaseCell, UICollectionViewDataSource, UIColl
         
         DispatchQueue.main.async {
             if let err = err {
-                CustomAlert.showAlert(withTitle: "Error", message: err.localizedDescription, viewController: (self.window?.rootViewController)!)
+                CustomAlert.showAlert(withTitle: "Alert", message: err.localizedDescription, viewController: (self.window?.rootViewController)!)
                 self.footerView?.setMessage(withText: "Something is wrong 😢.\n\n Drag down to try again.", visibleWaitIndicator:  false)
             } else {
                 //show wait indicator
