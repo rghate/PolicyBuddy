@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="lkr-qr-nKP" customClass="ActivePolicyCell" customModule="ComplexCollectionView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="565" height="290"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="565" height="290"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Policy Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g71-x5-Uuv">
+                        <rect key="frame" x="232" y="12" width="101.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwK-jh-9xl" customClass="CircularCountdownProgrssbar" customModule="ComplexCollectionView" customModuleProvider="target">
+                        <rect key="frame" x="20" y="40" width="40" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="CzF-3W-8im"/>
+                            <constraint firstAttribute="height" constant="40" id="QKU-2D-SkU"/>
+                        </constraints>
+                    </view>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tkd-Xc-hWQ">
+                        <rect key="frame" x="8" y="247" width="549" height="35"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hYr-uv-F8Z" customClass="PBRoundedRectButton" customModule="ComplexCollectionView">
+                                <rect key="frame" x="0.0" y="0.0" width="270.5" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Policy" image="doc"/>
+                                <connections>
+                                    <action selector="handlePolicyDetailsAction:" destination="lkr-qr-nKP" eventType="touchUpInside" id="BRy-V5-dDo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vXH-80-ArO" customClass="PBRoundedRectButton" customModule="ComplexCollectionView">
+                                <rect key="frame" x="278.5" y="0.0" width="270.5" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Get help" image="question"/>
+                                <connections>
+                                    <action selector="handleHelp:" destination="lkr-qr-nKP" eventType="touchUpInside" id="Po5-rV-0Qf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="63z-NA-kJZ"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="nCZ-fX-5aY">
+                        <rect key="frame" x="72" y="39" width="111.5" height="42"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FS9-Fy-IPD">
+                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="7r5-xU-K4z">
+                                <rect key="frame" x="0.0" y="21.5" width="60" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVa-aU-ASK">
+                                        <rect key="frame" x="0.0" y="0.0" width="21.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ns-0Q-kI4">
+                                        <rect key="frame" x="23.5" y="0.0" width="36.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="OwK-jh-9xl" firstAttribute="top" secondItem="lkr-qr-nKP" secondAttribute="top" constant="40" id="157-OG-G5R"/>
+                <constraint firstItem="nCZ-fX-5aY" firstAttribute="leading" secondItem="OwK-jh-9xl" secondAttribute="trailing" constant="12" id="BB1-Em-lvg"/>
+                <constraint firstItem="nCZ-fX-5aY" firstAttribute="centerY" secondItem="OwK-jh-9xl" secondAttribute="centerY" id="MbZ-ty-dqM"/>
+                <constraint firstItem="tkd-Xc-hWQ" firstAttribute="leading" secondItem="lkr-qr-nKP" secondAttribute="leading" constant="8" id="Nmh-5B-umc"/>
+                <constraint firstAttribute="trailing" secondItem="tkd-Xc-hWQ" secondAttribute="trailing" constant="8" id="fCw-8n-ybi"/>
+                <constraint firstItem="g71-x5-Uuv" firstAttribute="top" secondItem="lkr-qr-nKP" secondAttribute="top" constant="12" id="g10-Ui-YM9"/>
+                <constraint firstItem="OwK-jh-9xl" firstAttribute="leading" secondItem="lkr-qr-nKP" secondAttribute="leading" constant="20" id="pIz-T8-X13"/>
+                <constraint firstItem="g71-x5-Uuv" firstAttribute="centerX" secondItem="TzM-Ib-d04" secondAttribute="centerX" id="vX1-vI-lUn"/>
+                <constraint firstAttribute="bottom" secondItem="tkd-Xc-hWQ" secondAttribute="bottom" constant="8" id="xDb-Lz-wVl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="TzM-Ib-d04"/>
+            <size key="customSize" width="565" height="211"/>
+            <connections>
+                <outlet property="helpButton" destination="vXH-80-ArO" id="Ssa-C8-Uah"/>
+                <outlet property="messageLabel" destination="FS9-Fy-IPD" id="vQ6-SH-kje"/>
+                <outlet property="policyButton" destination="hYr-uv-F8Z" id="Ss4-ue-WVc"/>
+                <outlet property="progressbar" destination="OwK-jh-9xl" id="pw1-lp-Bqf"/>
+                <outlet property="progressbarHeightConstraint" destination="QKU-2D-SkU" id="FQ6-Zf-ILu"/>
+                <outlet property="timeTypeLabel" destination="9ns-0Q-kI4" id="fdj-wb-BOj"/>
+                <outlet property="timeValueLabel" destination="HVa-aU-ASK" id="0oM-fO-4lq"/>
+                <outlet property="titleLabel" destination="g71-x5-Uuv" id="pwe-IZ-Wrn"/>
+            </connections>
+            <point key="canvasLocation" x="103.62318840579711" y="52.232142857142854"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="doc" width="14" height="14"/>
+        <image name="question" width="16" height="16"/>
+    </resources>
+</document>

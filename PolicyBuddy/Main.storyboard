@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OJX-RT-DBx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SMo-Wd-18f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OJX-RT-DBx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="29h-fH-2pB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PG8-sr-2eq" kind="relationship" relationship="rootViewController" id="1XQ-Pk-Adz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7KD-my-VDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="89.732142857142847"/>
+        </scene>
+        <!--Home Controller-->
+        <scene sceneID="EYw-XM-ywH">
+            <objects>
+                <viewController id="PG8-sr-2eq" customClass="HomeController" customModule="ComplexCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrZ-AX-mAq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oha-IC-ni4" customClass="HomeHeaderView" customModule="ComplexCollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="IyV-aI-lLV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Oha-IC-ni4" firstAttribute="trailing" secondItem="viZ-jA-gbP" secondAttribute="trailing" id="kcw-cB-OUD"/>
+                            <constraint firstItem="Oha-IC-ni4" firstAttribute="top" secondItem="viZ-jA-gbP" secondAttribute="top" id="lKn-KU-2j5"/>
+                            <constraint firstItem="Oha-IC-ni4" firstAttribute="leading" secondItem="viZ-jA-gbP" secondAttribute="leading" id="snb-PK-IcL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="viZ-jA-gbP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="och-5u-Gr6"/>
+                    <connections>
+                        <outlet property="headerView" destination="Oha-IC-ni4" id="HYd-2R-MFt"/>
+                        <outlet property="headerViewHeightConstraint" destination="IyV-aI-lLV" id="IH4-Mo-uyD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkH-Vf-596" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="70.982142857142847"/>
+        </scene>
+        <!--Policy Paging Controller-->
+        <scene sceneID="zte-Vq-Q6C">
+            <objects>
+                <viewController storyboardIdentifier="PolicyPagingController" id="16j-l6-ZjE" customClass="PolicyPagingController" customModule="ComplexCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jhg-KP-6dp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2z-Cq-lum" customClass="PolicyHeaderView" customModule="ComplexCollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="xg4-jg-HMt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M2z-Cq-lum" firstAttribute="top" secondItem="fc2-zJ-FS1" secondAttribute="top" id="BdM-mD-Wbb"/>
+                            <constraint firstItem="M2z-Cq-lum" firstAttribute="trailing" secondItem="fc2-zJ-FS1" secondAttribute="trailing" id="e0v-Q4-QIz"/>
+                            <constraint firstItem="M2z-Cq-lum" firstAttribute="leading" secondItem="fc2-zJ-FS1" secondAttribute="leading" id="lTV-DU-LjA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fc2-zJ-FS1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t5D-Wy-iGM"/>
+                    <connections>
+                        <outlet property="headerView" destination="M2z-Cq-lum" id="md4-um-qq1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bGa-kW-zzv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="70.982142857142847"/>
+        </scene>
+        <!--Receipt Controller-->
+        <scene sceneID="0TT-Vm-cY7">
+            <objects>
+                <viewController storyboardIdentifier="receiptController" id="2kl-m5-oe3" customClass="ReceiptController" customModule="ComplexCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Cj-rz-ExS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This policy has been voided" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvw-uV-7A4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="UVS-z9-u1m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="D8L-03-7aO">
+                                <rect key="frame" x="0.0" y="69" width="414" height="827"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0nH-pQ-g6b">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uKT-pR-6GW">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lmp-Oe-MYz">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jvw-uV-7A4" firstAttribute="leading" secondItem="jlp-DO-vKe" secondAttribute="leading" id="1fe-JG-0kn"/>
+                            <constraint firstAttribute="bottom" secondItem="D8L-03-7aO" secondAttribute="bottom" id="1x2-EQ-Ecx"/>
+                            <constraint firstItem="D8L-03-7aO" firstAttribute="top" secondItem="jvw-uV-7A4" secondAttribute="bottom" id="5Fo-vA-qwT"/>
+                            <constraint firstItem="D8L-03-7aO" firstAttribute="leading" secondItem="jlp-DO-vKe" secondAttribute="leading" id="ZdN-Pm-Bkv"/>
+                            <constraint firstItem="D8L-03-7aO" firstAttribute="trailing" secondItem="jlp-DO-vKe" secondAttribute="trailing" id="ebY-A0-pND"/>
+                            <constraint firstItem="jvw-uV-7A4" firstAttribute="top" secondItem="jlp-DO-vKe" secondAttribute="top" id="lSK-u0-kPY"/>
+                            <constraint firstItem="jlp-DO-vKe" firstAttribute="trailing" secondItem="jvw-uV-7A4" secondAttribute="trailing" id="xK8-wH-IlT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jlp-DO-vKe"/>
+                    </view>
+                    <connections>
+                        <outlet property="bannerLabel" destination="jvw-uV-7A4" id="rz2-Oh-ueO"/>
+                        <outlet property="collectionView" destination="D8L-03-7aO" id="RhX-Q5-J2v"/>
+                        <outlet property="messageLabelHeightConstraint" destination="UVS-z9-u1m" id="6ac-dw-Ph8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ov-o8-xyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705.7971014492755" y="56.919642857142854"/>
+        </scene>
+    </scenes>
+</document>
