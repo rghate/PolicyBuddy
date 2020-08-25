@@ -1,5 +1,3 @@
-# CuvvaTechTest
-
 Deployment target: iOS11.0
 Mode: Portrait 
 Swift version: Swift 5
